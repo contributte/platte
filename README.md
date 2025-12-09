@@ -1,11 +1,27 @@
-# Platte
+![](https://heatbadger.now.sh/github/readme/contributte/platte/?deprecated=1)
 
-[![Phalconist](https://phalconist.com/phalette/platte/default.svg)](https://phalconist.com/phalette/platte)
-[![Build Status](https://img.shields.io/travis/phalette/platte.svg?style=flat-square)](https://travis-ci.org/phalette/platte)
-[![Code coverage](https://img.shields.io/coveralls/phalette/platte.svg?style=flat-square)](https://coveralls.io/r/phalette/platte)
-[![Downloads this Month](https://img.shields.io/packagist/dt/phalette/platte.svg?style=flat-square)](https://packagist.org/packages/phalette/platte)
-[![Latest stable](https://img.shields.io/packagist/v/phalette/platte.svg?style=flat-square)](https://packagist.org/packages/phalette/platte)
-[![HHVM Status](https://img.shields.io/hhvm/phalette/platte.svg?style=flat-square)](http://hhvm.h4cc.de/package/phalette/platte)
+<p align=center>
+    <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
+    <a href="https://bit.ly/cttfo"><img src="https://badgen.net/badge/support/forum/yellow"></a>
+    <a href="https://contributte.org/partners.html"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
+</p>
+
+<p align=center>
+    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://f3l1x.io">f3l1x.io</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+</p>
+
+## Disclaimer
+
+| :warning: | This project is no longer being maintained.
+|---|---|
+
+| Composer | [`phalette/platte`](https://packagist.org/packages/phalette/platte) |
+|---|------------------------------------------------------------|
+| Version | ![](https://badgen.net/packagist/v/phalette/platte)      |
+| PHP | ![](https://badgen.net/packagist/php/phalette/platte)    |
+| License | ![](https://badgen.net/github/license/contributte/platte)   |
+
+## About
 
 Combination of one of the best template engine Latte and pretty fast framework Phalcon.
 
@@ -31,7 +47,7 @@ use Phalette\Platte\LatteTemplateAdapter;
 
 $di->set('view', function () {
     $view = new View();
-    
+
     $view->registerEngines([
         ".latte" => function ($view, $di) {
             $factory = new LatteFactory();
@@ -112,7 +128,7 @@ See more on [official documentation](https://doc.nette.org/en/2.3/templating).
 
 You can use **macros** and **filters**.
 
-#### Macros 
+#### Macros
 
 Classic macros
 
@@ -267,7 +283,7 @@ final class MyUltraMacros extends MacroSet implements MacroInstaller
     public static function install(Compiler $compiler)
     {
         $me = new static($compiler);
-        
+
         $me->addMacro(...);
     }
 }
@@ -287,7 +303,7 @@ $factory->addMacro(new MyUltraMacros);
 ```php
 final class MyUltraFilters
 {
-    public static function hi($name) 
+    public static function hi($name)
     {
         return "Hi $name";
     }
@@ -300,3 +316,16 @@ final class MyUltraFilters
 $factory = new LatteFactory();
 $factory->addFilter('sayhi', ['MyUltraFilters', 'hi']);
 ```
+
+## Development
+
+This package was maintained by these authors.
+
+<a href="https://github.com/f3l1x">
+  <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
+</a>
+
+-----
+
+Consider to [support](https://contributte.org/partners.html) **contributte** development team.
+Also thank you for using this package.
